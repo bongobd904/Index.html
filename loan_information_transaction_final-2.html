@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Loan Information</title>
+<style>
+:root{--p:#e2136e;--bg:#f7f7f8;--text:#191919;--muted:#666}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,"Noto Sans Bengali",sans-serif;background:var(--bg);color:var(--text)}
+.notice{background:var(--p);color:#fff;text-align:center;padding:9px 14px;font-size:13px}
+nav{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:5}
+.nav{max-width:1050px;height:68px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:24px;font-weight:900;color:var(--p)}.links{display:flex;gap:22px;font-size:14px}.links a{text-decoration:none;color:#333}
+.hero{padding:70px 20px;background:linear-gradient(135deg,#fff,#fff0f6)}
+.wrap{max-width:1050px;margin:auto}.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
+h1{font-size:clamp(40px,5vw,62px);line-height:1.08;margin:0 0 18px}.pink{color:var(--p)}
+.lead{font-size:18px;color:var(--muted);max-width:650px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 20px;border-radius:10px;font-weight:700;text-decoration:none;border:1px solid var(--p);cursor:pointer}
+.primary{background:var(--p);color:white}.outline{color:var(--p);background:#fff}
+.box,.card{background:#fff;border:1px solid #eee;border-radius:18px;padding:25px;box-shadow:0 15px 45px #e2136e16}
+.icon{font-size:48px}section{padding:65px 20px}.title{text-align:center;font-size:34px;margin:0 0 10px}.sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 34px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card p{color:var(--muted);font-size:14px}
+.contact{background:#171717;color:#fff}.contact .sub{color:#bbb}.contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contactBox{background:#222;border:1px solid #333;border-radius:16px;padding:25px}.phone{font-size:28px;font-weight:800}
+label{display:block;margin:12px 0 7px;font-weight:700}input{width:100%;padding:14px;border-radius:10px;border:1px solid #ddd;font:inherit}
+.result{display:none;margin-top:12px;padding:10px;border-radius:8px;background:#eee;color:#333}
+footer{background:#111;color:#aaa;text-align:center;padding:24px;font-size:13px}
+@media(max-width:760px){.links{display:none}.heroGrid,.grid,.contactGrid{grid-template-columns:1fr}.hero{padding-top:55px}}
+</style>
+</head>
+<body>
+<div class="notice">নিরাপত্তা: PIN, OTP বা পাসওয়ার্ড কাউকে দেবেন না</div>
+<nav><div class="nav"><div class="logo">Loan Information</div>
+<div class="links"><a href="#home">হোম</a><a href="#loan">লোন</a><a href="#faq">FAQ</a><a href="#contact">যোগাযোগ</a></div></div></nav>
+
+<section class="hero" id="home"><div class="wrap heroGrid">
+<div><h1>লোন সম্পর্কে <span class="pink">জানুন</span></h1>
+<p class="lead">লোনের যোগ্যতা, প্রয়োজনীয় তথ্য এবং নিরাপদভাবে তথ্য যাচাই করার নিয়ম সহজ ভাষায় জানুন।</p>
+<div class="buttons"><a class="btn primary" href="#loan">লোনের তথ্য</a><a class="btn outline" href="#contact">যোগাযোগ</a></div></div>
+<div class="box"><div class="icon">💳</div><h2>নিরাপদ তথ্য যাচাই</h2><p style="color:var(--muted)">লোন সংক্রান্ত সর্বশেষ তথ্য ও শর্ত জানতে সংশ্লিষ্ট অফিসিয়াল চ্যানেল ব্যবহার করুন।</p></div>
+</div></section>
+
+<section id="loan"><div class="wrap"><h2 class="title">লোন সংক্রান্ত তথ্য</h2><p class="sub">লোন নেওয়ার আগে প্রযোজ্য শর্ত, চার্জ ও পরিশোধের নিয়ম ভালোভাবে যাচাই করুন।</p>
+<div class="grid">
+<div class="card"><h3>📋 যোগ্যতা</h3><p>লোন সুবিধা সবার জন্য একইভাবে প্রযোজ্য নাও হতে পারে। সংশ্লিষ্ট অফিসিয়াল অ্যাপে যোগ্যতা যাচাই করুন।</p></div>
+<div class="card"><h3>💰 শর্ত</h3><p>লোন গ্রহণের আগে মোট পরিশোধযোগ্য অর্থ, সময়সীমা ও প্রযোজ্য চার্জ বুঝে নিন।</p></div>
+<div class="card"><h3>🔐 নিরাপত্তা</h3><p>PIN, OTP বা পাসওয়ার্ড কখনো কারও কাছে প্রকাশ করবেন না।</p></div>
+</div></div></section>
+
+<section id="faq"><div class="wrap"><h2 class="title">সাধারণ প্রশ্ন</h2>
+<div class="grid">
+<div class="card"><h3>লোন কি সবাই পেতে পারে?</h3><p>লোন সুবিধা নির্দিষ্ট যোগ্যতা ও অ্যাকাউন্টের ওপর নির্ভর করতে পারে।</p></div>
+<div class="card"><h3>কোথায় যাচাই করব?</h3><p>সংশ্লিষ্ট প্রতিষ্ঠানের অফিসিয়াল অ্যাপ বা ওয়েবসাইট থেকে তথ্য যাচাই করুন।</p></div>
+<div class="card"><h3>PIN/OTP লাগবে?</h3><p>কোনো ব্যক্তি বা তৃতীয় পক্ষকে PIN বা OTP দেওয়া উচিত নয়।</p></div>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="wrap"><h2 class="title">যোগাযোগ</h2><p class="sub">তথ্য জানতে যোগাযোগ করুন।</p>
+<div class="contactGrid">
+<div class="contactBox"><h3>যোগাযোগের নম্বর</h3><div class="phone">01888349668</div></div>
+<div class="contactBox">
+<h3>Transaction ID</h3>
+<p style="color:#bbb"></p>
+<form onsubmit="event.preventDefault();document.getElementById('result').style.display='block'">
+<label for="txid">Transaction ID</label>
+<input id="txid" name="transaction_id" type="text" autocomplete="off" placeholder="Transaction ID লিখুন">
+<button class="btn primary" type="submit" style="margin-top:12px">Submit</button>
+<div id="result" class="result">আপনার তথ্য গ্রহণ করা হয়েছে।</div>
+</form>
+</div></div></div></section>
+<footer>© 2026 Loan Information • তথ্য ব্যবহারের আগে প্রযোজ্য শর্ত যাচাই করুন</footer>
+</body>
+</html>
