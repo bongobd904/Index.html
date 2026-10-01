@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সহজ লোন সেবা - দ্রুত ও নিরাপদ লোন</title>
+    <style>
+        /* CSS স্টাইল */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { line-height: 1.6; color: #333; background-color: #f4f7f6; }
+        .container { width: 85%; max-width: 1100px; margin: auto; }
+        
+        /* হেডার */
+        header { background: #0d3b66; color: #fff; padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; }
+        .logo span { color: #f4d35e; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+        nav ul li a:hover { color: #f4d35e; }
+        
+        /* হিরো সেকশন */
+        .hero { background: linear-gradient(rgba(13, 59, 102, 0.8), rgba(13, 59, 102, 0.8)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover; color: #fff; text-align: center; padding: 100px 20px; }
+        .hero h2 { font-size: 36px; margin-bottom: 15px; }
+        .hero p { font-size: 18px; margin-bottom: 25px; }
+        .btn { display: inline-block; background: #f4d35e; color: #0d3b66; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; border: none; cursor: pointer; transition: 0.3s; }
+        .btn:hover { background: #e0c04c; }
+
+        /* সেকশন ও ফর্ম স্টাইল */
+        .section { padding: 60px 0; text-align: center; }
+        .bg-light { background: #eef5fc; }
+        .section h2 { margin-bottom: 30px; color: #0d3b66; }
+        
+        .calc-box, .loan-form { max-width: 500px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: left; }
+        .input-group, .form-group { margin-bottom: 15px; }
+        .input-group label, .form-group label { display: block; margin-bottom: 5px; font-weight: 600; color: #444; }
+        .input-group input, .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; }
+        
+        .btn-calc { width: 100%; background: #0d3b66; color: #fff; padding: 12px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        .btn-calc:hover { background: #0a2d4d; }
+        
+        .result-box { margin-top: 20px; padding: 15px; background: #eef5fc; border-radius: 5px; border-left: 4px solid #0d3b66; }
+        .result-box h3 { color: #0d3b66; margin-bottom: 10px; }
+        
+        /* ফুটার */
+        footer { background: #0d3b66; color: #fff; text-align: center; padding: 40px 0 20px; margin-top: 40px; }
+        footer p { margin-bottom: 10px; }
+        .contact-number { font-size: 22px; font-weight: bold; color: #f4d35e; margin: 15px 0; }
+        
+        /* --- ভাসমান (Floating) হোয়াটসঅ্যাপ বাটন CSS --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20ba57;
+            box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        @media(max-width: 768px) {
+            nav ul { flex-direction: column; text-align: center; margin-top: 15px; }
+            nav ul li { margin: 10px 0; }
+            .hero h2 { font-size: 28px; }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- হেডার ও নেভিগেশন -->
+    <header>
+        <div class="container nav-container">
+            <h1 class="logo">সহজ<span>লোন</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">হোম</a></li>
+                    <li><a href="#calculator">ক্যালকুলেটর</a></li>
+                    <li><a href="#apply">আবেদন করুন</a></li>
+                    <li><a href="#contact">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- হিরো সেকশন -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>সহজ শর্তে ও দ্রুততম সময়ে পার্সোনাল ও বিজনেস লোন</h2>
+            <p>আপনার স্বপ্নের বাস্তবায়নে আমরা আছি আপনার পাশে। সর্বনিম্ন সুদের হারে লোন নিন।</p>
+            <a href="#apply" class="btn">এখনই আবেদন করুন</a>
+        </div>
+    </section>
+
+    <!-- ইএমআই ক্যালকুলেটর -->
+    <section id="calculator" class="section">
+        <div class="container">
+            <h2>লোন ইএমআই (EMI) ক্যালকুলেটর</h2>
+            <div class="calc-box">
+                <div class="input-group">
+                    <label>লোনের পরিমাণ (টাকা):</label>
+                    <input type="number" id="amount" placeholder="যেমন: ১০০০০০" value="100000">
+                </div>
+                <div class="input-group">
+                    <label>বার্ষিক সুদের হার (%):</label>
+                    <input type="number" id="interest" placeholder="যেমন: ১০" value="10">
+                </div>
+                <div class="input-group">
+                    <label>মেয়াদ (মাস):</label>
+                    <input type="number" id="months" placeholder="যেমন: ১২" value="12">
+                </div>
+                <button onclick="calculateEMI()" class="btn-calc">হিসাব করুন</button>
+
+                <div id="result" class="result-box">
+                    <h3>মাসিক কিস্তি: <span id="monthly-payment">০</span> টাকা</h3>
+                    <p>মোট সুদ: <span id="total-interest">০</span> টাকা</p>
+                    <p>মোট পরিশোধযোগ্য: <span id="total-payment">০</span> টাকা</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- আবেদনের ফর্ম -->
+    <section id="apply" class="section bg-light">
+        <div class="container">
+            <h2>লোনের জন্য আবেদন করুন</h2>
+            <form class="loan-form">
+                <div class="form-group">
+                    <label>আপনার পূর্ণ নাম:</label>
+                    <input type="text" required placeholder="মোঃ রহিম হোসেন">
+                </div>
+                <div class="form-group">
+                    <label>মোবাইল নম্বর:</label>
+                    <input type="tel" required placeholder="017XXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label>লোনের ধরন:</label>
+                    <select required>
+                        <option value="">নির্বাচন করুন</option>
+                        <option value="personal">পার্সোনাল লোন</option>
+                        <option value="business">বিজনেস লোন</option>
+                        <option value="home">হোম লোন</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>কাঙ্ক্ষিত লোনের পরিমাণ (টাকা):</label>
+                    <input type="number" required placeholder="যেমন: ৫০০০০০">
+                </div>
+                <button type="button" class="btn-calc" style="background: #f4d35e; color: #0d3b66; font-weight: bold;">আবেদন জমা দিন</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ফুটার ও যোগাযোগ -->
+    <footer id="contact">
+        <div class="container">
+            <h2>যোগাযোগ করুন</h2>
+            <p>যেকোনো প্রয়োজনে বা সরাসরি কথা বলতে আমাদের সাথে যোগাযোগ করুন:</p>
+            
+            <div class="contact-number">
+                📞 01888349668 (WhatsApp + imo)
+            </div>
+
+            <p style="margin-top: 30px; font-size: 14px; opacity: 0.8;">&copy; ২০২৬ সহজ লোন। সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+
+    <!-- ভাসমান (Floating) হোয়াটসঅ্যাপ বাটন -->
+    <a href="https://wa.me/8801888349668?text=হ্যালো,%20আমি%20লোন%20সম্পর্কে%20জানতে%20চাই।" class="whatsapp-float" target="_blank" title="হোয়াটসঅ্যাপে চ্যাট করুন">
+        <svg viewBox="0 0 32 32">
+            <path d="M16 2a14 14 0 0 0-12 21.2L2 30l7-2A14 14 0 1 0 16 2zm0 25.5a11.4 11.4 0 0 1-5.8-1.6l-.4-.2-4.3 1.1 1.2-4.2-.3-.4a11.5 11.5 0 1 1 9.6 5.3zm6.3-8.5c-.3-.2-2-.1-2.3-.2-.3-.2-.5-.3-.7.1s-.8 1-.9 1.2c-.2.2-.4.2-.7.1s-1.4-.5-2.6-1.6c-1-1-1.7-2.1-1.9-2.4s0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6s0-.4 0-.5c-.2-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.9 1.2 3.4 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .8.8.2 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.6.2-1.7-.1 0-.3-.1-.6-.2z"/>
+        </svg>
+    </a>
+
+    <script>
+        // ইএমআই ক্যালকুলেটর ফাংশন
+        function calculateEMI() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const interestRate = parseFloat(document.getElementById('interest').value);
+            const months = parseFloat(document.getElementById('months').value);
+
+            if (isNaN(amount) || isNaN(interestRate) || isNaN(months) || amount <= 0 || months <= 0) {
+                alert("দয়া করে সঠিক সংখ্যা প্রদান করুন।");
+                return;
+            }
+
+            const monthlyRate = (interestRate / 100) / 12;
+            const emi = (amount * monthlyRate * Math.pow(1 + monthlyRate, months)) / (Math.pow(1 + monthlyRate, months) - 1);
+            const totalPayment = emi * months;
+            const totalInterest = totalPayment - amount;
+
+            document.getElementById('monthly-payment').innerText = Math.round(emi);
+            document.getElementById('total-interest').innerText = Math.round(totalInterest);
+            document.getElementById('total-payment').innerText = Math.round(totalPayment);
+        }
+    </script>
+</body>
+</html>
